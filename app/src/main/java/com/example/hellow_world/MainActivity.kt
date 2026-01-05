@@ -19,11 +19,10 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Delete
-import androidx.compose.material.icons.filled.Person
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -63,33 +62,28 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun MyApp() {
     Hellow_worldTheme {
-        Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-            BoxExample()
-//            ImageCustomize()
-//            TestExample(
-//                name = "Mostakim",
-//                modifier = Modifier.padding(innerPadding)
-//            )
+        Surface(Modifier.fillMaxSize(),color = MaterialTheme.colorScheme.surface) {
+            ProfessionalScreenDesign()
         }
     }
 }
 
 // Box example
 
-@Composable
-fun BoxExample() {
-    Box(
-        modifier = Modifier
-            .background(Color.Green).size(200.dp),
-        contentAlignment = Alignment.Center,
-    ) {
-        Icon(
-            imageVector = Icons.Default.Delete,
-            contentDescription = null,
-            modifier = Modifier.size(200.dp)
-        )
-    }
-}
+//@Composable
+//fun BoxExample() {
+//    Box(
+//        modifier = Modifier
+//            .background(Color.Green).size(200.dp),
+//        contentAlignment = Alignment.Center,
+//    ) {
+//        Icon(
+//            imageVector = Icons.Default.Delete,
+//            contentDescription = null,
+//            modifier = Modifier.size(200.dp)
+//        )
+//    }
+//}
 
 
 // show column and Row example
@@ -112,7 +106,7 @@ fun ColumnAndRowExample(modifier: Modifier = Modifier) {
             horizontalArrangement = Arrangement.Start
         ) {
             Spacer(modifier = modifier.padding(start = 16.dp))
-            Icon(Icons.Default.Person, contentDescription = null, modifier = modifier)
+//            Icon(Icons.Default.Person, contentDescription = null, modifier = modifier)
             Spacer(modifier = modifier.padding(start = 8.dp))
             Text("Motiur-Mostakim")
 
